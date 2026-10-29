@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: meditriage
+resources:
+  - ../../base
+images:
+  - name: ghcr.io/guffy0921/meditriage
+    digest: sha256:11a9c511d4ea3351a32c286e1031c35da57a313d298db8dec4091022977e8971
