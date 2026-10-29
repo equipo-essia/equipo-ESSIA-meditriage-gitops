@@ -12,7 +12,14 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: meditriage
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+        - /spec/replicas
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - RespectIgnoreDifferences=true
