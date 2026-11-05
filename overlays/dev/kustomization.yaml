@@ -2,7 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: meditriage
 resources:
-  - ../../base
+- ../../base
 images:
-  - name: ghcr.io/guffy0921/meditriage
-    digest: sha256:11a9c511d4ea3351a32c286e1031c35da57a313d298db8dec4091022977e8971
+- digest: sha256:beaecf2e59cbd3568814a6a2b09aef2907755dea12f2751135979849412f874b
+  name: ghcr.io/guffy0921/meditriage
+  newName: ghcr.io/equipo-essia/meditriage
